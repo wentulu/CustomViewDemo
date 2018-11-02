@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <attr name="title" format="string"/>
+    <attr name="titleColor" format="color"/>
+    <attr name="titleSize" format="dimension"/>
+
+    <declare-styleable name="TitleView">
+        <attr name="title"/>
+        <attr name="titleColor"/>
+        <attr name="titleSize"/>
+    </declare-styleable>
+
+
+</resources>
