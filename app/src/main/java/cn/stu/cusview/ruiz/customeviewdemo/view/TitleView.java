@@ -17,6 +17,12 @@ import cn.stu.cusview.ruiz.customeviewdemo.R;
 
 
 /**
+ * 自定义View控件步骤
+ * 1、自定义属性
+ * 2、自定义属性的使用与在自定义的widget中获取
+ * 3、测量onMeasure(int widthSpec, int heightSpec)(利用自定义属性以及控件特性来进行计算)
+ * 4.绘制onDraw(Canvas canvas)
+ *
  * 第一个自定义View主要测试一些实现
  * 1、自定义属性
  * 2、尝试图片数组
