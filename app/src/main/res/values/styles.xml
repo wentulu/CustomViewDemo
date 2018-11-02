@@ -13,11 +13,15 @@
     <attr name="title" format="string"/>
     <attr name="titleColor" format="color"/>
     <attr name="titleSize" format="dimension"/>
+    <attr name="stringArr" format="reference"/>
+    <attr name="drawableArr" format="reference"/>
 
     <declare-styleable name="TitleView">
         <attr name="title"/>
         <attr name="titleColor"/>
         <attr name="titleSize"/>
+        <attr name="stringArr"/>
+        <attr name="drawableArr"/>
     </declare-styleable>
 
 

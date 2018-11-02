@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">CustomeViewDemo</string>
     <string name="app_naem">Hello java good</string>
+
+    <string-array name="test">
+        <item>AAA</item>
+        <item>BBB</item>
+    </string-array>
+
+    <array name="drawableArr">
+        <item>@drawable/ic_launcher_background</item>
+        <item>@drawable/ic_launcher_foreground</item>
+    </array>
+
 </resources>
