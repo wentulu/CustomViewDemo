@@ -7,7 +7,7 @@ import android.util.Log;
 public class TitleViewActivity extends AppCompatActivity {
 
     private static final String TAG = TitleViewActivity.class.getSimpleName();
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
 
     @Override

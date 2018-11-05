@@ -15,7 +15,11 @@
         android:onClick="goTitleView"
         android:text="Title View"/>
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goTouchView"
+        android:text="Touch View"/>
 
 
 
