@@ -6,21 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#ff0000"
-    android:gravity="center">
+    android:gravity="center_horizontal">
 
 
-
-
-    <cn.stu.cusview.ruiz.customeviewdemo.view.TitleView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:title="@string/app_naem"
-        app:titleColor="@color/colorAccent"
-        app:titleSize="16dp"
-        app:stringArr="@array/test"
-        app:drawableArr="@array/drawableArr"
-        />
+        android:layout_height="wrap_content"
+        android:onClick="goTitleView"
+        android:text="Title View"/>
+
+
+
 
 
 </LinearLayout>

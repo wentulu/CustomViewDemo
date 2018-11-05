@@ -32,7 +32,7 @@ public class TitleView extends View {
 
     private static final String Tag = TitleView.class.getSimpleName();
 
-    private static final boolean DEBUG = true;//日志控制   true的时候打印日志
+    private static final boolean DEBUG = false;//日志控制   true的时候打印日志
 
     private String mTitleStr;//
     private int mTitleColor;//
@@ -125,18 +125,20 @@ public class TitleView extends View {
         //记录文字的实际展示区域
         textRect = new Rect();
         mPaint.getTextBounds(mTitleStr, 0, mTitleStr.length(), textRect);//测试出来的宽高稍微小些
+        if (DEBUG) {
+            Log.e(Tag,"text modifying Top:Right:bottom:left="+textRect.top+":"+textRect.right+":"+textRect.bottom+":"+textRect.left);
+            Log.e(Tag,"Text modifying width:height="+textRect.width()+":"+textRect.height());
+        }
         float width = mPaint.measureText(mTitleStr, 0, mTitleStr.length());//测量出实际的宽度
         textRect.left = 0;
         textRect.right = (int) (width + 0.5f);
         textRect.top = 0;
         textRect.bottom = mTitleSize;//高度和文字的高度一致 测量出来的bound会小了一个像素
-
-        //
         baseTextLine = mPaint.getFontMetrics().ascent;
         if (DEBUG) {
-            Log.e(Tag, "text  top:right:bottom:left=" + textRect.top + ":" + textRect.right + ":" + textRect.bottom + ":" + textRect.left);
-            Log.e(Tag, "Text width:height=" + textRect.width() + ":" + textRect.height());
-            Log.e(Tag, "Display width:height=" + getResources().getDisplayMetrics().widthPixels + ":" + getResources().getDisplayMetrics().heightPixels);
+            Log.e(Tag, "text  modified top:right:bottom:left=" + textRect.top + ":" + textRect.right + ":" + textRect.bottom + ":" + textRect.left);
+            Log.e(Tag, "Text modified width:height=" + textRect.width() + ":" + textRect.height());
+            Log.e(Tag, "screen Display width:height=" + getResources().getDisplayMetrics().widthPixels + ":" + getResources().getDisplayMetrics().heightPixels);
         }
     }
 
@@ -180,7 +182,7 @@ public class TitleView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        //绘制的时候基线应该稍微往下移动一个密度的高度可能由于四舍五入造成
+        //绘制的时候基线应该稍微往下移动一个密度的高度可能由于四舍五入造成,
         canvas.drawText(mTitleStr, (getWidth() - textRect.width()) / 2, (getHeight() - textRect.height()) / 2 - (baseTextLine + mPaint.getFontMetrics().bottom - density), mPaint);
 
     }
