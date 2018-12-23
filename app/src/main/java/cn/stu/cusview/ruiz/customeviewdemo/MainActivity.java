@@ -2,12 +2,15 @@ package cn.stu.cusview.ruiz.customeviewdemo;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
 
 
@@ -173,6 +176,20 @@ public class MainActivity extends AppCompatActivity {
     public void goTouchView(View view){
         Intent touchViewIntent = new Intent(this, TouchEventActivity.class);
         startActivity(touchViewIntent);
+    }
+
+    public void openCameraAlbum(View view){
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void openGetInstallApp(View view){
+        Intent in  = new Intent();
+        in.setAction(Intent.ACTION_VIEW);
+        in.addCategory(Intent.CATEGORY_BROWSABLE);
+        in.setData(Uri.parse("http://m.dhgate.com/product"));
+        startActivity(in);
     }
 
 

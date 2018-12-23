@@ -4,35 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    tools:context=".camera.CameraActivity">
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="goTitleView"
-        android:text="Title View"/>
+        android:onClick="openCamera"
+        android:text="打开相机"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="goTouchView"
-        android:text="Touch View"/>
+        android:onClick="openAlbum"
+        android:text="打开相册"/>
 
-    <Button
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="openCameraAlbum"
-        android:text="Camera Album"/>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="get installed app"
-        android:onClick="openGetInstallApp"/>
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"/>
 
 
 </LinearLayout>
