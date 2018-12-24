@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
 
 
@@ -104,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "onResume()");
         }
         super.onResume();
+        TextView text_jni = findViewById(R.id.jni_tv);
+        text_jni.setText(new JniUtil().getString());
     }
 
     @Override
