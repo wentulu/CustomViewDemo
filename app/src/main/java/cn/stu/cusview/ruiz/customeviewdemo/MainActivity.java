@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
 
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onResume();
         TextView text_jni = findViewById(R.id.jni_tv);
-        text_jni.setText(new JniUtil().getString());
+        text_jni.setText(JniDynammicUtil.getStringD());
     }
 
     @Override
