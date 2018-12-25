@@ -10,7 +10,7 @@ import java.lang.ref.WeakReference;
 public class ActivityLifeCallBack  implements Application.ActivityLifecycleCallbacks{
 
     private static final String TAG = "ActivityLifeCallBack";
-    private final boolean DEBUG = true;
+    private final boolean DEBUG = false;
 
 //    WeakReference<Activity> mActivityWeakReference = ;
 

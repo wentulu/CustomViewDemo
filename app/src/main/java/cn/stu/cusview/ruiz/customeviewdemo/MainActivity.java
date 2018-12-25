@@ -67,13 +67,14 @@ import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
  * <p>
  * 4 退出一个Activity时，当前Activity先走finish()启动销毁，紧接着是onPause()
  * 然后上一个Activity的onRestart()直到onResume(),当前Activity才会走onStop()到销毁
+ * <p>
  */
 
 public class MainActivity extends AppCompatActivity {
 
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onResume();
         TextView text_jni = findViewById(R.id.jni_tv);
-        text_jni.setText(JniDynammicUtil.getStringD());
+        text_jni.setText(JniDynammicUtil.getStringD()+new JniUtil().getString());
     }
 
     @Override
@@ -171,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "onConfigurationChanged(Configuration newConfig)");
         super.onConfigurationChanged(newConfig);
 
+       Log.e(TAG,"键盘状态"+newConfig.keyboardHidden);
+       Log.e(TAG,"");
     }
 
     public void goTitleView(View view) {
