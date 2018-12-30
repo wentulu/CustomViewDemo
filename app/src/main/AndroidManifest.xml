@@ -4,10 +4,13 @@
     package="cn.stu.cusview.ruiz.customeviewdemo">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions"/>
-    
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -19,7 +22,8 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
-            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+
+            <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,10 +41,14 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path"></meta-data>
+                android:resource="@xml/file_path" />
         </provider>
 
-        <activity android:name=".installedapp.InsatlledAppActivity"></activity>
+        <activity android:name=".installedapp.InsatlledAppActivity" />
+        <activity android:name=".audiored.AudioRecordActivity" />
+        <activity android:name=".cameraapi.CameraApiActivity" />
+        <activity android:name=".audiored.AudioRecord2Activity" />
+        <activity android:name=".cameraapi.CameraTextureActivity"></activity>
     </application>
 
 </manifest>

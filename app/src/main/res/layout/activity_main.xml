@@ -42,5 +42,22 @@
         android:id="@+id/edt_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Audio Recorder"
+        android:onClick="openAudioRecord"/>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goCameraApi"
+        android:text="Go Camera API SurfaceView"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goCameraApiTexture"
+        android:text="Go Camera API TextureView"/>
 </LinearLayout>

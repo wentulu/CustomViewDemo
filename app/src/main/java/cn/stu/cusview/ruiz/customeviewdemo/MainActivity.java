@@ -10,7 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecord2Activity;
+import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecordActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
@@ -209,4 +213,24 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG,configuration.getLocales().get(0).getISO3Country());
         Log.e(TAG,"orientation"+configuration.orientation+"");
     }
+
+
+    public void openAudioRecord(View view){
+        Intent intent = new Intent(this, AudioRecord2Activity.class);
+        startActivity(intent);
+    }
+
+
+    public void goCameraApi(View view){
+        Intent intent = new Intent(this, CameraApiActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goCameraApiTexture(View view){
+        Intent intent = new Intent(this, CameraTextureActivity.class);
+        startActivity(intent);
+    }
+
+
 }
