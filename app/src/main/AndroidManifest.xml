@@ -48,7 +48,16 @@
         <activity android:name=".audiored.AudioRecordActivity" />
         <activity android:name=".cameraapi.CameraApiActivity" />
         <activity android:name=".audiored.AudioRecord2Activity" />
-        <activity android:name=".cameraapi.CameraTextureActivity"></activity>
+        <activity android:name=".cameraapi.CameraTextureActivity" />
+        <activity android:name=".dialog.AlertDialogActivity" />
+
+        <service
+            android:name=".ipc.messenger.service.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"/>
+
+        <activity android:name=".ipc.messenger.client.MessengerClientActivity"></activity>
     </application>
 
 </manifest>

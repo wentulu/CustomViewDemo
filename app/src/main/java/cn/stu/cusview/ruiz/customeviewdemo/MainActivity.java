@@ -16,6 +16,7 @@ import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.ipc.messenger.client.MessengerClientActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
@@ -232,5 +233,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void openServiceActivity(View view){
+        Intent intent = new Intent(this, MessengerClientActivity.class);
+        startActivity(intent);
+    }
 
 }

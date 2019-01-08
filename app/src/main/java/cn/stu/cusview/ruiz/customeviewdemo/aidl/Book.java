@@ -40,14 +40,12 @@ public class Book implements Parcelable{
     public static final Creator<Book> CREATOR = new Creator<Book>() {
         @Override
         public Book createFromParcel(Parcel source) {
-
-
             return new Book(source);
         }
 
         @Override
         public Book[] newArray(int size) {
-            return new Book[0];
+            return new Book[size];
         }
     };
 

@@ -60,4 +60,11 @@
         android:layout_height="wrap_content"
         android:onClick="goCameraApiTexture"
         android:text="Go Camera API TextureView"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:onClick="openServiceActivity"/>
 </LinearLayout>
