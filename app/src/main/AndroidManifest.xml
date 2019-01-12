@@ -58,7 +58,8 @@
             android:process=":remote" />
 
         <activity android:name=".ipc.messenger.client.MessengerClientActivity" />
-        <activity android:name=".fragment.FragmentDeActivity"></activity>
+        <activity android:name=".fragment.FragmentDeActivity" />
+        <activity android:name=".receiver.ReceiverDemoActivity"></activity>
     </application>
 
 </manifest>
