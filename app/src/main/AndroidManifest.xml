@@ -55,9 +55,10 @@
             android:name=".ipc.messenger.service.MyService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote"/>
+            android:process=":remote" />
 
-        <activity android:name=".ipc.messenger.client.MessengerClientActivity"></activity>
+        <activity android:name=".ipc.messenger.client.MessengerClientActivity" />
+        <activity android:name=".fragment.FragmentDeActivity"></activity>
     </application>
 
 </manifest>

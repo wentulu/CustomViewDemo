@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,8 @@ import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecordActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.dialog.AlertDialogActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.fragment.FragmentDeActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.ipc.messenger.client.MessengerClientActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -236,6 +239,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void openServiceActivity(View view){
         Intent intent = new Intent(this, MessengerClientActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goDialog(View view){
+        Intent intent = new Intent(this, AlertDialogActivity.class);
+        startActivity(intent);
+    }
+
+    public void goFragmentLifeCycle(View view){
+        Intent intent = new Intent(this, FragmentDeActivity.class);
         startActivity(intent);
     }
 

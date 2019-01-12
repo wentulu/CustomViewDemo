@@ -67,4 +67,16 @@
         android:layout_height="wrap_content"
         android:text="Start Service"
         android:onClick="openServiceActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog "
+        android:onClick="goDialog"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Fragment Life Cycle"
+        android:onClick="goFragmentLifeCycle"/>
 </LinearLayout>

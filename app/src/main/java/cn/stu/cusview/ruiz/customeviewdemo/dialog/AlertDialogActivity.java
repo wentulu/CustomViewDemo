@@ -20,8 +20,10 @@ public class AlertDialogActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alert_dialog);
 
-        show_progressDialog = findViewById(R.id.show_progressDialog);
         show_alertDialog = findViewById(R.id.show_alertDialog);
+        show_progressDialog = findViewById(R.id.show_progressDialog);
+        show_alertDialog.setOnClickListener(this);
+        show_progressDialog.setOnClickListener(this);
     }
 
 
