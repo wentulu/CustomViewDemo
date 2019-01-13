@@ -17,6 +17,7 @@ import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.dialog.AlertDialogActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.file.FileActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.fragment.FragmentDeActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.ipc.messenger.client.MessengerClientActivity;
@@ -250,6 +251,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void goFragmentLifeCycle(View view){
         Intent intent = new Intent(this, FragmentDeActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goFileSave(View view){
+        Intent intent = new Intent(this, FileActivity.class);
         startActivity(intent);
     }
 

@@ -59,7 +59,9 @@
 
         <activity android:name=".ipc.messenger.client.MessengerClientActivity" />
         <activity android:name=".fragment.FragmentDeActivity" />
-        <activity android:name=".receiver.ReceiverDemoActivity"></activity>
+        <activity android:name=".receiver.ReceiverDemoActivity" />
+        <activity android:name=".file.FileActivity" />
+        <activity android:name=".file.SharedPreferenceActivity"></activity>
     </application>
 
 </manifest>
