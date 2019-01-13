@@ -10,8 +10,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".MyApplication"
@@ -65,7 +64,13 @@
         <activity android:name=".file.FileActivity" />
         <activity android:name=".file.SharedPreferenceActivity" />
         <activity android:name=".db.BookMemoryActivity" />
-        <activity android:name=".provider.ContactsActivity"></activity>
+        <activity android:name=".provider.ContactsActivity" />
+
+        <provider
+            android:name=".provider.MyContentProvider"
+            android:authorities="cn.stu.ruiz.custom"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>
