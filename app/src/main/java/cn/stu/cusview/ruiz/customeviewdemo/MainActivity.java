@@ -24,6 +24,7 @@ import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.ipc.messenger.client.MessengerClientActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
+import cn.stu.cusview.ruiz.customeviewdemo.provider.ContactsActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
 
 
@@ -264,6 +265,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void goDataBaseAct(View view){
         Intent intent = new Intent(this, BookMemoryActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goContacts(View view){
+        Intent intent = new Intent(this, ContactsActivity.class);
         startActivity(intent);
     }
 

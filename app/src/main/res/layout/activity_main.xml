@@ -96,6 +96,13 @@
             android:layout_height="wrap_content"
             android:text="Database Helper"
             android:onClick="goDataBaseAct"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go Contacts"
+            android:onClick="goContacts"/>
     </LinearLayout>
 
 </ScrollView>

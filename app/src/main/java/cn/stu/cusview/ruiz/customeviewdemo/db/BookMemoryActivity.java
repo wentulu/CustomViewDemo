@@ -57,6 +57,7 @@ public class BookMemoryActivity extends AppCompatActivity {
            }while (cursor.moveToNext());
        }
 
+       cursor.close();
        books_info_tv.setText(booksList.toString());
     }
 
