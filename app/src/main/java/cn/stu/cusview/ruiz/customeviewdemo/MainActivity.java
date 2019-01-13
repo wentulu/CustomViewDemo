@@ -16,6 +16,7 @@ import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecordActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.db.BookMemoryActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.dialog.AlertDialogActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.file.FileActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.fragment.FragmentDeActivity;
@@ -259,5 +260,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FileActivity.class);
         startActivity(intent);
     }
+
+
+    public void goDataBaseAct(View view){
+        Intent intent = new Intent(this, BookMemoryActivity.class);
+        startActivity(intent);
+    }
+
 
 }

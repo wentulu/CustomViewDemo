@@ -5,6 +5,12 @@ import android.os.Parcelable;
 
 public class Book implements Parcelable{
 
+
+    public Book(String name, String author) {
+        this.name = name;
+        this.author = author;
+    }
+
     private String name;
     private String author;
 
@@ -25,6 +31,11 @@ public class Book implements Parcelable{
         this.author = author;
     }
 
+
+    @Override
+    public String toString() {
+        return "[bookName:"+name+" author:"+author+"]\n";
+    }
 
     @Override
     public int describeContents() {

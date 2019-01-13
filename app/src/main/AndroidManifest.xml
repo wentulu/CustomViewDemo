@@ -61,7 +61,9 @@
         <activity android:name=".fragment.FragmentDeActivity" />
         <activity android:name=".receiver.ReceiverDemoActivity" />
         <activity android:name=".file.FileActivity" />
-        <activity android:name=".file.SharedPreferenceActivity"></activity>
+        <activity android:name=".file.SharedPreferenceActivity" />
+        <activity android:name=".db.BookMemoryActivity" />
+        <activity android:name=".provider.ContactsActivity"></activity>
     </application>
 
 </manifest>
