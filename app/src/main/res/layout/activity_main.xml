@@ -103,6 +103,12 @@
             android:layout_height="wrap_content"
             android:text="Go Contacts"
             android:onClick="goContacts"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goNotification"
+            android:text="Notification"/>
     </LinearLayout>
 
 </ScrollView>
