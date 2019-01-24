@@ -5,12 +5,15 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goSocketClient"
+            android:text="Client Socket" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +31,11 @@
             android:layout_height="wrap_content"
             android:onClick="openCameraAlbum"
             android:text="Camera Album" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goCameraAlbum"
+            android:text="Camera Album2" />
 
 
         <Button

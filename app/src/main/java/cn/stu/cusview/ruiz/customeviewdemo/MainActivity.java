@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecord2Activity;
 import cn.stu.cusview.ruiz.customeviewdemo.audiored.AudioRecordActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.camera.AlbumActivityActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.camera.CameraActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraApiActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.cameraapi.CameraTextureActivity;
@@ -26,6 +27,8 @@ import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.notification.NotificationActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.provider.ContactsActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.socket.ServerSocketService;
+import cn.stu.cusview.ruiz.customeviewdemo.socket.SocketClientActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.view.TouchEventView;
 
 
@@ -111,6 +114,10 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "onStart()");
         }
         super.onStart();
+
+        Intent intent = new Intent(this, ServerSocketService.class);
+        startService(intent);
+
     }
 
 
@@ -147,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, "onDestroy()");
         }
         super.onDestroy();
+        Intent intent = new Intent(this, ServerSocketService.class);
+        stopService(intent);
     }
 
 
@@ -278,6 +287,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void goNotification(View view){
         Intent intent = new Intent(this, NotificationActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goSocketClient(View view){
+        Intent intent = new Intent(this, SocketClientActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goCameraAlbum(View view){
+        Intent intent = new Intent(this, AlbumActivityActivity.class);
         startActivity(intent);
     }
 

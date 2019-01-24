@@ -28,22 +28,26 @@ public class ContactsActivity extends AppCompatActivity {
 
     public void getContacts(View view){
 
-       Cursor cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                null,null,null,null);
-        if (cursor.moveToFirst()){
-            StringBuilder sb = new StringBuilder();
-            do {
+        try {
+            Cursor cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                     null,null,null,null);
+            if (cursor.moveToFirst()){
+                StringBuilder sb = new StringBuilder();
+                do {
 
-                String name = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-                String number = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                    String name = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                    String number = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
-                sb.append("[name:"+name+" Num:"+number+"]\n");
+                    sb.append("[name:"+name+" Num:"+number+"]\n");
 
-            }while (cursor.moveToNext());
-            mTextView.setText(sb.toString());
+                }while (cursor.moveToNext());
+                mTextView.setText(sb.toString());
+            }
+
+            cursor.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        cursor.close();
 
     }
 
