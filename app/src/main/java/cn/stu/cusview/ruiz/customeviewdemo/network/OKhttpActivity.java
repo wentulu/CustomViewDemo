@@ -2,7 +2,10 @@ package cn.stu.cusview.ruiz.customeviewdemo.network;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -66,6 +69,22 @@ public class OKhttpActivity extends AppCompatActivity {
         }).start();
 
 
+
+        setSupportActionBar(new Toolbar(this));
+
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
 
 }
