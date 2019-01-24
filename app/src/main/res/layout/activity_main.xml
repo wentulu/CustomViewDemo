@@ -25,6 +25,36 @@
             android:layout_height="wrap_content"
             android:onClick="goTouchView"
             android:text="Touch View" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Url connection"
+                android:textAllCaps="false"
+                android:onClick="goUrlConnection"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="okhttp connection"
+                android:textAllCaps="false"
+                android:onClick="goOkhttp"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="goMediaPlayer"
+            android:text="MediaPlayer"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:onClick="onVideoView"
+            android:text="VideoView"/>
 
         <Button
             android:layout_width="match_parent"

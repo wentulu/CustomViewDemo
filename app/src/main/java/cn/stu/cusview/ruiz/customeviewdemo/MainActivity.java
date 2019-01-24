@@ -25,6 +25,11 @@ import cn.stu.cusview.ruiz.customeviewdemo.installedapp.InsatlledAppActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.ipc.messenger.client.MessengerClientActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniDynammicUtil;
 import cn.stu.cusview.ruiz.customeviewdemo.jnitest.JniUtil;
+import cn.stu.cusview.ruiz.customeviewdemo.media.MP3PlayActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.media.VideoViewActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.net.OkHttpDemoActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.network.OKhttpActivity;
+import cn.stu.cusview.ruiz.customeviewdemo.network.URLConActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.notification.NotificationActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.provider.ContactsActivity;
 import cn.stu.cusview.ruiz.customeviewdemo.socket.ServerSocketService;
@@ -207,6 +212,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(touchViewIntent);
     }
 
+
+    public void goOkhttp(View view){
+        Intent intent = new Intent(this, OKhttpActivity.class);
+        startActivity(intent);
+    }
+
     public void openCameraAlbum(View view){
         Intent intent = new Intent(this, CameraActivity.class);
         startActivity(intent);
@@ -220,7 +231,10 @@ public class MainActivity extends AppCompatActivity {
         in.setData(Uri.parse("http://m.dhgate.com/product"));
         startActivity(in);
     }
-
+    public void onVideoView(View view){
+        Intent intent = new Intent(this, VideoViewActivity.class);
+        startActivity(intent);
+    }
 
     public void getConfiguration() {
         Configuration configuration = getResources().getConfiguration();
@@ -299,6 +313,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void goCameraAlbum(View view){
         Intent intent = new Intent(this, AlbumActivityActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goMediaPlayer(View view){
+        Intent intent = new Intent(this, MP3PlayActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goUrlConnection(View view){
+        Intent intent = new Intent(this, URLConActivity.class);
         startActivity(intent);
     }
 
